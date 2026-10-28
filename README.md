@@ -103,9 +103,6 @@ cd SQL-DataWarehouse-Project
 4. Check `tests/` for available validation instructions.
 5. Verify database names, file paths, and other environment-specific settings before execution.
 
-**Data workflow:** `CRM & ERP CSVs → Bronze → Silver → Gold`
-
-> The exact database setup and execution sequence depend on the SQL scripts included in the repository.
 
 ## Analytics Use Cases
 
@@ -115,10 +112,6 @@ The resulting model can support analysis of:
 - Customer and country-level sales
 - Customer segmentation
 - Sales summaries for reporting
-
-## Skills Demonstrated
-
-SQL · Data Warehousing · ETL/ELT · Data Cleaning · Data Integration · Dimensional Modeling · Star Schema · Data Lineage
 
 ## About me
 
