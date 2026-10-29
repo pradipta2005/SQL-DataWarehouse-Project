@@ -28,7 +28,7 @@ This project consolidates CRM and ERP CSV data into a SQL Server data warehouse,
 
 ## Architecture
 
-![High-level data warehouse architecture](docs/architehture.png)
+![High-level data warehouse architecture](docs/architecture.png)
 
 | Layer | Purpose |
 |---|---|
