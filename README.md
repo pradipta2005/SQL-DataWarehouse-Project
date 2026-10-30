@@ -14,6 +14,23 @@ An end-to-end data engineering project that integrates CRM and ERP data through 
 </div>
 
 ---
+## 📑 Table of Contents
+
+- [Overview](#overview)
+- [Architecture](#architecture)
+- [Data Flow](#data-flow)
+- [Source Integration](#source-integration)
+- [Sales Data Mart](#sales-data-mart)
+- [SQL Analytics](#sql-analytics)
+- [Technology Stack](#technology-stack)
+- [Repository Structure](#repository-structure)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Clone the Repository](#clone-the-repository)
+  - [Explore the Project](#explore-the-project)
+- [Skills Demonstrated](#skills-demonstrated)
+- [About Me](#about-me)
+- [License](#license)
 
 ## Overview
 
