@@ -4,7 +4,7 @@
 
 **Building an Analytics-Ready Data Warehouse with SQL Server**
 
-An end-to-end data engineering project integrating CRM and ERP data through a **Bronze → Silver → Gold** architecture and modeling curated sales data in a **star schema**.
+An end-to-end data engineering project that integrates CRM and ERP data through a **Bronze → Silver → Gold** architecture and transforms it into a dimensional model for sales analytics.
 
 [![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/en-us/sql-server)
 [![SQL](https://img.shields.io/badge/Language-SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)](https://learn.microsoft.com/en-us/sql/)
@@ -17,14 +17,14 @@ An end-to-end data engineering project integrating CRM and ERP data through a **
 
 ## Overview
 
-This project consolidates CRM and ERP CSV data into a SQL Server data warehouse, preparing it for reliable sales analytics and reporting.
+This project consolidates CRM and ERP CSV data in SQL Server, prepares it through layered transformations, and structures business-ready data for analytical queries and reporting.
 
-### Key Highlights
-- Multi-source CRM and ERP data integration
+### Key Features
+- CRM and ERP source-data integration
 - Bronze, Silver, and Gold warehouse layers
 - Data cleaning, standardization, and transformation
-- Star-schema design with fact and dimension tables
-- Documented data flow, source relationships, and data model
+- Fact and dimension tables using a star schema
+- SQL-based customer, product, and sales analysis
 
 ## Architecture
 
@@ -32,36 +32,58 @@ This project consolidates CRM and ERP CSV data into a SQL Server data warehouse,
 
 | Layer | Purpose |
 |---|---|
-| **Bronze** | Stores raw source data with minimal changes. |
+| **Bronze** | Stores raw source data. |
 | **Silver** | Cleans, standardizes, and integrates data. |
-| **Gold** | Organizes curated, business-ready data for analysis. |
+| **Gold** | Organizes curated data for reporting and analysis. |
 
 ## Data Flow
 
 ![Data flow and lineage](docs/data_flow.png)
 
-CRM and ERP CSV files are loaded into Bronze tables, prepared in Silver, and shaped into Gold-layer analytical objects for reporting and SQL analysis.
+CRM and ERP CSV files flow into Bronze tables, are prepared in Silver, and are modeled as Gold-layer analytical objects.
 
 ## Source Integration
 
 ![CRM and ERP data integration](docs/data_integration.png)
 
-The integration model documents relationships across CRM sales, customer and product information, plus ERP customer attributes, locations, and product categories.
+The integration model shows relationships between CRM sales, customer and product data, and ERP customer attributes, locations, and product categories.
 
 ## Sales Data Mart
 
 ![Gold-layer sales star schema](docs/data_model.png)
 
-The Gold-layer model centers on `gold.fact_sales`, connected to two descriptive dimensions:
+The Gold-layer model centers on `gold.fact_sales` and connects it to two dimensions:
 
 - **`gold.dim_customers`** — customer identifiers and attributes.
 - **`gold.dim_products`** — product identifiers, categories, and attributes.
 
-The model includes order dates, shipping and due dates, sales amount, quantity, and price. The diagram expresses the sales calculation as:
+The model includes order, shipping, and due dates, as well as sales amount, quantity, and price.
 
 ```text
 Sales = Quantity × Price
 ```
+
+## SQL Analytics
+
+The `Analytics_Scripts/` directory contains numbered SQL scripts covering exploratory and analytical query patterns.
+
+| Script | Focus |
+|---|---|
+| `01_database_exploration.sql` | Database exploration |
+| `02_dimensions_exploration.sql` | Dimension exploration |
+| `03_data_range_exploration.sql` | Date and data-range exploration |
+| `04_measures_exploration.sql` | Measures and key metrics |
+| `05_magnitude_analysis.sql` | Magnitude analysis |
+| `06_ranking_analysis.sql` | Ranking analysis |
+| `07_change_over_time_analysis.sql` | Trends over time |
+| `08_cumulative_analysis.sql` | Cumulative analysis |
+| `09_performance_analysis.sql` | Performance analysis |
+| `10_part_to_whole_analysis.sql` | Part-to-whole analysis |
+| `11_data_segmentation.sql` | Data segmentation |
+| `12_report_customers.sql` | Customer reporting |
+| `13_report_products.sql` | Product reporting |
+
+These scripts provide a structured set of SQL examples for exploring warehouse data and developing business-focused reports.
 
 ## Technology Stack
 
@@ -69,17 +91,18 @@ Sales = Quantity × Price
 - **Query language:** SQL
 - **Source format:** CSV
 - **Architecture:** Medallion (Bronze, Silver, Gold)
-- **Modeling:** Fact and dimension tables / star schema
-- **Diagrams:** Draw.io
+- **Data modeling:** Star schema
+- **Documentation:** Draw.io
 
 ## Repository Structure
 
 ```text
 SQL-DataWarehouse-Project/
-├── datasets/       # CRM and ERP source datasets
-├── docs/           # Architecture and data-model diagrams
-├── scripts/        # SQL loading and transformation scripts
-├── tests/          # Tests and validation assets
+├── Analytics_Scripts/  # SQL exploration and analytical queries
+├── datasets/           # CRM and ERP source datasets
+├── docs/               # Architecture and data-model diagrams
+├── scripts/            # Data loading and transformation SQL
+├── tests/              # Tests and validation assets
 ├── LICENSE
 └── README.md
 ```
@@ -91,29 +114,30 @@ SQL-DataWarehouse-Project/
 - SQL Server Management Studio (SSMS) or another SQL client
 - Git
 
-### Setup
+### Clone the repository
+
 ```bash
 git clone https://github.com/pradipta2005/SQL-DataWarehouse-Project.git
 cd SQL-DataWarehouse-Project
 ```
 
-1. Review the source files in `datasets/`.
-2. Explore the diagrams in `docs/`.
-3. Review the SQL scripts in `scripts/` and run them in dependency order.
-4. Check `tests/` for available validation instructions.
-5. Verify database names, file paths, and other environment-specific settings before execution.
+### Explore the project
+1. Review the CRM and ERP source files in `datasets/`.
+2. Read the architecture and modeling diagrams in `docs/`.
+3. Review the loading and transformation scripts in `scripts/`.
+4. Run the relevant SQL scripts in dependency order after checking database names and file paths.
+5. Explore `Analytics_Scripts/` for analysis queries and customer/product reports.
+6. Review `tests/` for available validation instructions.
 
+**Data workflow:** `CRM & ERP CSVs → Bronze → Silver → Gold → SQL Analytics`
 
-## Analytics Use Cases
+> The exact database setup and execution order depend on the SQL scripts in the repository.
 
-The resulting model can support analysis of:
-- Sales trends over time
-- Product and category performance
-- Customer and country-level sales
-- Customer segmentation
-- Sales summaries for reporting
+## Skills Demonstrated
 
-## About me
+SQL · Data Warehousing · ETL/ELT · Data Cleaning · Source Integration · Dimensional Modeling · Star Schema · Exploratory Analysis · Analytical Reporting
+
+## About the Author
 
 <div align="center">
 
