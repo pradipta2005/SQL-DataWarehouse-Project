@@ -137,12 +137,16 @@ cd SQL-DataWarehouse-Project
 
 SQL · Data Warehousing · ETL/ELT · Data Cleaning · Source Integration · Dimensional Modeling · Star Schema · Exploratory Analysis · Analytical Reporting
 
-## About the Author
+## About Me 
 
 <div align="center">
 
 **Pradipta Khan**  
 *Data Analyst | Data Science Graduate*
+
+I'm a Data Science graduate passionate about transforming raw data into meaningful insights. I enjoy working with SQL, Python, and Power BI to explore datasets, solve analytical problems, and build data-driven solutions. My projects focus on data analysis, data warehousing, and visualization, with an emphasis on turning complex data into actionable business insights.
+
+I'm continuously learning and exploring new technologies to strengthen my skills in data analytics and data engineering.
 
 <a href="https://github.com/pradipta2005"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
 <a href="https://www.linkedin.com/in/pradipta-khan/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
