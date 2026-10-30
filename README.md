@@ -8,16 +8,18 @@ An end-to-end data engineering project that integrates CRM and ERP data through 
 
 [![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/en-us/sql-server)
 [![SQL](https://img.shields.io/badge/Language-SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)](https://learn.microsoft.com/en-us/sql/)
-[![Medallion Architecture](https://img.shields.io/badge/Architecture-Medallion-8A63D2?style=flat-square)](#-architecture)
+[![Medallion Architecture](https://img.shields.io/badge/Architecture-Medallion-8A63D2?style=flat-square)](#architecture)
 [![MIT License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
 </div>
 
 ---
+
 ## 📑 Table of Contents
 
 - [Overview](#overview)
 - [Architecture](#architecture)
+- [Key Insights and Business Value](#key-insights-and-business-value)
 - [Data Flow](#data-flow)
 - [Source Integration](#source-integration)
 - [Sales Data Mart](#sales-data-mart)
@@ -32,11 +34,14 @@ An end-to-end data engineering project that integrates CRM and ERP data through 
 - [About Me](#about-me)
 - [License](#license)
 
+---
+
 ## Overview
 
 This project consolidates CRM and ERP CSV data in SQL Server, prepares it through layered transformations, and structures business-ready data for analytical queries and reporting.
 
 ### Key Features
+
 - CRM and ERP source-data integration
 - Bronze, Silver, and Gold warehouse layers
 - Data cleaning, standardization, and transformation
@@ -52,6 +57,17 @@ This project consolidates CRM and ERP CSV data in SQL Server, prepares it throug
 | **Bronze** | Stores raw source data. |
 | **Silver** | Cleans, standardizes, and integrates data. |
 | **Gold** | Organizes curated data for reporting and analysis. |
+
+## Key Insights and Business Value
+
+This project transforms integrated CRM and ERP data into an analytical foundation for sales reporting, customer analysis, and product performance evaluation.
+
+- **📈 Sales Performance:** Analyze sales trends over time, calculate cumulative revenue, and compare annual product performance to identify changes in business performance.
+- **👥 Customer Intelligence:** Segment customers into VIP, Regular, and New groups using spending and relationship duration, while evaluating customer value, order frequency, and recency.
+- **📦 Product and Category Analysis:** Rank products by revenue, compare category contributions, and classify products by sales performance to support product-level decision-making.
+- **📊 Business Reporting:** Build reusable SQL views, `gold.report_customers` and `gold.report_products`, that consolidate key metrics into structured customer and product reports.
+
+**Business Value:** Demonstrates how SQL, dimensional modeling, and analytical reporting can turn operational data into actionable information for business decision-making.
 
 ## Data Flow
 
@@ -105,10 +121,10 @@ These scripts provide a structured set of SQL examples for exploring warehouse d
 ## Technology Stack
 
 - **Database:** Microsoft SQL Server
-- **Query language:** SQL
-- **Source format:** CSV
+- **Query Language:** SQL
+- **Source Format:** CSV
 - **Architecture:** Medallion (Bronze, Silver, Gold)
-- **Data modeling:** Star schema
+- **Data Modeling:** Star schema
 - **Documentation:** Draw.io
 
 ## Repository Structure
@@ -127,18 +143,20 @@ SQL-DataWarehouse-Project/
 ## Getting Started
 
 ### Prerequisites
+
 - Microsoft SQL Server
 - SQL Server Management Studio (SSMS) or another SQL client
 - Git
 
-### Clone the repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/pradipta2005/SQL-DataWarehouse-Project.git
 cd SQL-DataWarehouse-Project
 ```
 
-### Explore the project
+### Explore the Project
+
 1. Review the CRM and ERP source files in `datasets/`.
 2. Read the architecture and modeling diagrams in `docs/`.
 3. Review the loading and transformation scripts in `scripts/`.
@@ -146,7 +164,7 @@ cd SQL-DataWarehouse-Project
 5. Explore `Analytics_Scripts/` for analysis queries and customer/product reports.
 6. Review `tests/` for available validation instructions.
 
-**Data workflow:** `CRM & ERP CSVs → Bronze → Silver → Gold → SQL Analytics`
+**Data Workflow:** `CRM & ERP CSVs → Bronze → Silver → Gold → SQL Analytics`
 
 > The exact database setup and execution order depend on the SQL scripts in the repository.
 
@@ -154,16 +172,20 @@ cd SQL-DataWarehouse-Project
 
 SQL · Data Warehousing · ETL/ELT · Data Cleaning · Source Integration · Dimensional Modeling · Star Schema · Exploratory Analysis · Analytical Reporting
 
-## About Me 
+## About Me
 
 <div align="center">
 
 **Pradipta Khan**  
 *Data Analyst | Data Science Graduate*
 
+</div>
+
 I'm a Data Science graduate passionate about transforming raw data into meaningful insights. I enjoy working with SQL, Python, and Power BI to explore datasets, solve analytical problems, and build data-driven solutions. My projects focus on data analysis, data warehousing, and visualization, with an emphasis on turning complex data into actionable business insights.
 
 I'm continuously learning and exploring new technologies to strengthen my skills in data analytics and data engineering.
+
+<div align="center">
 
 <a href="https://github.com/pradipta2005"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
 <a href="https://www.linkedin.com/in/pradipta-khan/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
